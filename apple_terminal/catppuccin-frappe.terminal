@@ -149,17 +149,17 @@
 	<key>BackgroundAlphaInactive</key>
 	<real>0.5</real>
 	<key>BackgroundBlur</key>
-	<real>0.0</real>
+	<real>0.20274769176136365</real>
 	<key>BackgroundBlurInactive</key>
 	<real>0.40000000000000002</real>
 	<key>BackgroundColor</key>
 	<data>
 	YnBsaXN0MDDUAQIDBAUGBwpYJHZlcnNpb25ZJGFyY2hpdmVyVCR0b3BYJG9iamVjdHMS
 	AAGGoF8QD05TS2V5ZWRBcmNoaXZlctEICVRyb290gAGjCwwTVSRudWxs0w0ODxARElVO
-	U1JHQlxOU0NvbG9yU3BhY2VWJGNsYXNzTxAnMC4xNDExNzY0NzA2IDAuMTQ5MDE5NjA3
-	OCAwLjIwMzkyMTU2ODYAEAGAAtIUFRYXWiRjbGFzc25hbWVYJGNsYXNzZXNXTlNDb2xv
-	cqIWGFhOU09iamVjdAgRGiQpMjdJTFFTV11kand+qKqssbzFzdAAAAAAAAABAQAAAAAA
-	AAAZAAAAAAAAAAAAAAAAAAAA2Q==
+	U1JHQlxOU0NvbG9yU3BhY2VWJGNsYXNzTxA0MC4xNDExNzY0NzA2IDAuMTQ5MDE5NjA3
+	OCAwLjIwMzkyMTU2ODYgMC44OTU0OTAyNjk1ABABgALSFBUWF1okY2xhc3NuYW1lWCRj
+	bGFzc2VzV05TQ29sb3KiFhhYTlNPYmplY3QIERokKTI3SUxRU1ddZGp3frW3ub7J0trd
+	AAAAAAAAAQEAAAAAAAAAGQAAAAAAAAAAAAAAAAAAAOY=
 	</data>
 	<key>BackgroundSettingsForInactiveWindows</key>
 	<true/>
@@ -185,6 +185,8 @@
 	<integer>2</integer>
 	<key>DisableANSIColor</key>
 	<false/>
+	<key>DynamicANSIForegroundColors</key>
+	<true/>
 	<key>Font</key>
 	<data>
 	YnBsaXN0MDDUAQIDBAUGBwpYJHZlcnNpb25ZJGFyY2hpdmVyVCR0b3BYJG9iamVjdHMS
