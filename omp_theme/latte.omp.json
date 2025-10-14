@@ -1,0 +1,122 @@
+{
+  "$schema": "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json",
+  "blocks": [
+    {
+      "type": "prompt",
+      "alignment": "left",
+      "newline": true,
+      "segments": [
+        {
+          "foreground": "p:catppuccin_blue",
+          "properties": {
+            "style": "full"
+          },
+          "style": "plain",
+          "template": "{{ .Path }}",
+          "type": "path"
+        },
+        {
+          "type": "git",
+          "style": "plain",
+          "foreground": "p:catppuccin_pink",
+          "properties": {
+            "fetch_status": true,
+            "fetch_upstream_icon": false,
+            "branch_icon": " ",
+
+            "branch_ahead_icon": "⇣",
+            "branch_behind_icon": "⇡"
+          },
+          "template": "{{ .HEAD }}{{ if gt .Behind 0 }} {{ .BranchBehindIcon }}{{ .Behind }}{{ end }}{{ if gt .Ahead 0 }}{{ .BranchAheadIcon }}{{ .Ahead }}{{ end }}{{ if gt .StashCount 0 }} *{{ .StashCount }}{{ end }}{{ if .Merge }} merge{{ end }}{{ if gt .Working.Unmerged 0 }} ~{{ .Working.Unmerged }}{{ end }}{{ if gt .Staging.Added 0 }} +{{ .Staging.Added }}{{ end }}{{ if gt .Working.Modified 0 }} !{{ .Working.Modified }}{{ end }}{{ if gt .Working.Untracked 0 }} ?{{ .Working.Untracked }}{{ end }}"
+      }
+      ]
+    },
+    {
+      "type": "prompt",
+      "alignment": "right",
+      "segments": [
+        {
+          "type": "executiontime",
+          "style": "plain",
+          "foreground": "p:catppuccin_mauve",
+          "properties": {
+            "threshold": 500,
+            "style": "round"
+          }
+        },
+        {
+          "properties": {
+            "display_mode": "always"
+          },
+          "template": "{{ .Venv }}",
+          "foreground": "p:catppuccin_lavender",
+          "type": "python",
+          "style": "plain"
+        },
+        {
+          "properties": {
+            "time_format": "15:04"
+          },
+          "foreground": "p:catppuccin_peach",
+          "type": "time",
+          "style": "plain"
+        }
+      ]
+    },
+    {
+      "alignment": "left",
+      "type": "prompt",
+      "newline": true,
+      "segments": [
+      {
+        "template": "❯",
+        "foreground_templates": [
+          "{{ if gt .Code 0 }}p:catppuccin_red{{ end }}",
+          "{{ if eq .Code 0 }}p:catppuccin_green{{ end }}"
+        ],
+        "type": "text",
+        "style": "plain"
+      }
+      ]
+    }
+  ],
+  "transient_prompt": {
+    "template": "{{now | date \"15:04\"}} ❯ ",
+    "foreground_templates": [
+      "{{ if gt .Code 0 }}p:catppuccin_red{{ end }}",
+      "{{ if eq .Code 0 }}p:catppuccin_green{{ end }}"
+    ],
+    "type": "text",
+    "style": "plain"
+  },
+  "palette": {
+    "catppuccin_rosewater" : "#dc8a78",
+    "catppuccin_flamingo" : "#dd7878",
+    "catppuccin_pink" : "#ea76cb",
+    "catppuccin_mauve" : "#8839ef",
+    "catppuccin_red" : "#d20f39",
+    "catppuccin_maroon" : "#e64553",
+    "catppuccin_peach" : "#fe640b",
+    "catppuccin_yellow" : "#df8e1d",
+    "catppuccin_green" : "#40a02b",
+    "catppuccin_teal" : "#179299",
+    "catppuccin_sky" : "#04a5e5",
+    "catppuccin_sapphire" : "#209fb5",
+    "catppuccin_blue" : "#1e66f5",
+    "catppuccin_lavender" : "#7287fd",
+    "catppuccin_text" : "#4c4f69",
+    "catppuccin_subtext1" : "#5c5f77",
+    "catppuccin_subtext0" : "#6c6f85",
+    "catppuccin_overlay2" : "#7c7f93",
+    "catppuccin_overlay1" : "#8c8fa1",
+    "catppuccin_overlay0" : "#9ca0b0",
+    "catppuccin_surface2" : "#acb0be",
+    "catppuccin_surface1" : "#bcc0cc",
+    "catppuccin_surface0" : "#ccd0da",
+    "catppuccin_base" : "#eff1f5",
+    "catppuccin_mantle" : "#e6e9ef",
+    "catppuccin_crust" : "#dce0e8"
+  },
+  "version": 3,
+  "final_space": true
+}
