@@ -122,6 +122,9 @@ exec zsh
 ├── apple_terminal
 │   ├── catppuccin-frappe.terminal
 │   └── catppuccin-latte.terminal
+├── assets
+│   ├── frappe_preview.png
+│   └── latte_preview.png
 ├── auto_update_theme
 │   ├── com.user.terminaltheme.swift.plist
 │   └── terminal-theme-watcher.swift

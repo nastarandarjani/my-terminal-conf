@@ -6,7 +6,7 @@
   <key>Label</key><string>com.user.terminaltheme.swift</string>
   <key>ProgramArguments</key>
   <array>
-    <string>/Users/nastaran/Library/Scripts/terminal-theme-watcher.swift</string>
+    <string>~/Library/Scripts/terminal-theme-watcher.swift</string>
   </array>
   <key>RunAtLoad</key><true/>
   <key>KeepAlive</key><true/>
