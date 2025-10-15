@@ -20,6 +20,13 @@ else
     end tell'
 fi
 
+# history manager
+eval "$(atuin init zsh)"
+
+export CARAPACE_BRIDGES='zsh,fish,bash,inshellisense' # optional
+zstyle ':completion:*' format $'\e[2;37mCompleting %d\e[m'
+source <(carapace _carapace)
+
 #* Conda Setup
 # export PATH=/usr/local/anaconda3/bin:$PATH
 # export PATH=/opt/homebrew/anaconda3/bin:$PATH
@@ -39,6 +46,7 @@ fi
 # unset __conda_setup
 # # <<< conda initialize <<<
 
-# ---- Eza (better ls) -----
+# ---- alias -----
 
 alias ls="eza --color=always --long --no-time --no-user --no-permissions --group-directories-first --total-size"
+alias cat="bat"

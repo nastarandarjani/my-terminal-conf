@@ -99,6 +99,36 @@ Install **eza**, a modern replacement for `ls`:
 brew install eza
 ```
 
+Install **tlrc**, a modern, offline alternative to tldr pages (quick CLI help):
+
+```bash
+brew install tlrc
+```
+
+Install **bat**, a syntax-highlighted, modern replacement for `cat`:
+
+```bash
+brew install bat
+```
+
+Install **atuin**, a smarter, searchable shell history replacement:
+
+```bash
+brew install atuin
+```
+
+Copy the Atuin configuration file:
+
+```bash
+cp atuin_config.toml ~/.config/atuin/config.toml
+```
+
+And finally, install **carapace**, a command-line completion for many tools
+
+```bash
+brew install carapace
+```
+
 ---
 
 ### 8. Update `.zshrc`
@@ -118,7 +148,9 @@ exec zsh
 
 ```
 .
+├── atuin_ config.toml
 ├── README.md
+├── .zshrc
 ├── apple_terminal
 │   ├── catppuccin-frappe.terminal
 │   └── catppuccin-latte.terminal

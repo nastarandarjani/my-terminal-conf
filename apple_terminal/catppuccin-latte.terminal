@@ -209,9 +209,13 @@
 	</data>
 	<key>ShowActiveProcessInTitle</key>
 	<false/>
+	<key>ShowCommandKeyInTitle</key>
+	<false/>
 	<key>ShowDimensionsInTitle</key>
 	<false/>
 	<key>ShowRepresentedURLInTitle</key>
+	<false/>
+	<key>ShowTTYNameInTitle</key>
 	<false/>
 	<key>TextColor</key>
 	<data>
@@ -222,8 +226,14 @@
 	cqIWGFhOU09iamVjdAgRGiQpMjdJTFFTV11kand+qKqssbzFzdAAAAAAAAABAQAAAAAA
 	AAAZAAAAAAAAAAAAAAAAAAAA2Q==
 	</data>
+	<key>WindowTitle</key>
+	<string>Terminal</string>
+	<key>columnCount</key>
+	<integer>90</integer>
 	<key>name</key>
 	<string>catppuccin-latte</string>
+	<key>rowCount</key>
+	<integer>25</integer>
 	<key>type</key>
 	<string>Window Settings</string>
 </dict>

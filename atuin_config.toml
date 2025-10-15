@@ -1,0 +1,15 @@
+## possible values: prefix, fulltext, fuzzy, skim
+search_mode = "fuzzy"
+search_mode_shell_up_key_binding = "fuzzy"
+style = "compact"
+inline_height = 15
+invert = true
+show_preview = false
+history_format = "{time}\t{duration}\t{command}"
+max_preview_height = 9
+show_tabs = false
+enter_accept = true
+prefers_reduced_motion = true
+
+[sync]
+records = true
