@@ -23,9 +23,28 @@ fi
 # history manager
 eval "$(atuin init zsh)"
 
-export CARAPACE_BRIDGES='zsh,fish,bash,inshellisense' # optional
+export CARAPACE_BRIDGES='zsh,inshellisense' # optional
 zstyle ':completion:*' format $'\e[2;37mCompleting %d\e[m'
 source <(carapace _carapace)
+
+
+# FZF
+eval "$(fzf --zsh)"
+export FZF_CTRL_T_COMMAND='fd --type f --max-depth 1 --one-file-system; fd --type d  --max-depth 1 --hidden --strip-cwd-prefix --one-file-system --exclude .git; fd --type d --hidden --strip-cwd-prefix --one-file-system --exclude .git --min-depth 2'
+
+# Setup fzf previews
+export FZF_CTRL_T_OPTS="
+--height 50% --layout=default --border
+--style=minimal
+--prompt='❯ '
+
+--preview '
+if [ -d {} ]; then
+  eza --icons=always --tree --color=always {} | head -50
+else
+  bat --decorations=always --color=always --theme auto:system -n --line-range :50 {}
+fi
+'"
 
 #* Conda Setup
 # export PATH=/usr/local/anaconda3/bin:$PATH
@@ -47,6 +66,7 @@ source <(carapace _carapace)
 # # <<< conda initialize <<<
 
 # ---- alias -----
+export MANPAGER="sh -c 'awk '\''{ gsub(/\x1B\[[0-9;]*m/, \"\", \$0); gsub(/.\x08/, \"\", \$0); print }'\'' | bat -n -l man --decorations=always'"
 
 alias ls="eza --color=always --long --no-time --no-user --no-permissions --group-directories-first --total-size"
-alias cat="bat"
+alias cat="bat --paging=never"

@@ -207,6 +207,8 @@
 	cqIWGFhOU09iamVjdAgRGiQpMjdJTFFTV11kand+qKqssbzFzdAAAAAAAAABAQAAAAAA
 	AAAZAAAAAAAAAAAAAAAAAAAA2Q==
 	</data>
+	<key>ShouldRestoreContent</key>
+	<false/>
 	<key>ShowActiveProcessInTitle</key>
 	<false/>
 	<key>ShowCommandKeyInTitle</key>

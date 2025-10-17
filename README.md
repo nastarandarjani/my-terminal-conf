@@ -37,6 +37,12 @@ Then import the following themes in **Terminal → Settings → Profiles → ⚙
 
 > **Note:** Make sure the font is set to **JetBrainsMono NFM 13** in Terminal preferences.
 
+Disable default login messages for a cleaner terminal prompt:
+
+```bash
+touch ~/.hushlogin
+```
+
 ---
 
 ### 3. Install Oh My Zsh
@@ -111,6 +117,27 @@ Install **bat**, a syntax-highlighted, modern replacement for `cat`:
 brew install bat
 ```
 
+Apply the Catppuccin theme to bat:
+
+```bash
+mkdir -p "$(bat --config-dir)/themes"
+cp *.tmTheme "$(bat --config-dir)/themes"
+bat cache --build
+cp bat_config $(bat --config-dir)/config
+```
+
+Install **fd**, a modern replacement for `find`:
+
+```bash
+brew install fd
+```
+
+Install **fzf**, a command-line fuzzy finder:
+
+```bash
+brew install fzf
+```
+
 Install **atuin**, a smarter, searchable shell history replacement:
 
 ```bash
@@ -160,6 +187,10 @@ exec zsh
 ├── auto_update_theme
 │   ├── com.user.terminaltheme.swift.plist
 │   └── terminal-theme-watcher.swift
+├── bat_theme
+│   ├── bat_config
+│   ├── Catppuccin Frappe.tmTheme
+│   └── Catppuccin Latte.tmTheme
 └── omp_theme
     ├── frappe.omp.json
     └── latte.omp.json

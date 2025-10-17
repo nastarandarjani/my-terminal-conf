@@ -207,12 +207,16 @@
 	ohYYWE5TT2JqZWN0CBEaJCkyN0lMUVNXXWRqd36nqauwu8TMzwAAAAAAAAEBAAAAAAAA
 	ABkAAAAAAAAAAAAAAAAAAADY
 	</data>
+	<key>ShouldRestoreContent</key>
+	<false/>
 	<key>ShowActiveProcessInTitle</key>
 	<false/>
 	<key>ShowDimensionsInTitle</key>
 	<false/>
 	<key>ShowRepresentedURLInTitle</key>
 	<false/>
+	<key>ShowTerminalInDockIcon</key>
+	<true/>
 	<key>TextColor</key>
 	<data>
 	YnBsaXN0MDDUAQIDBAUGBwpYJHZlcnNpb25ZJGFyY2hpdmVyVCR0b3BYJG9iamVjdHMS
