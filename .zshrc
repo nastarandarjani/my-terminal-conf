@@ -1,10 +1,3 @@
-# Path to your Oh My Zsh installation.
-export ZSH="$HOME/.oh-my-zsh"
-
-plugins=(git zsh-autosuggestions zsh-syntax-highlighting fast-syntax-highlighting)
-
-source $ZSH/oh-my-zsh.sh
-
 # Check system dark mode status
 local is_dark=$(defaults read -g AppleInterfaceStyle 2>/dev/null)
 
@@ -20,17 +13,21 @@ else
     end tell'
 fi
 
-# history manager
-eval "$(atuin init zsh)"
+# Path to your Oh My Zsh installation.
+export ZSH="$HOME/.oh-my-zsh"
 
-export CARAPACE_BRIDGES='zsh,inshellisense' # optional
-zstyle ':completion:*' format $'\e[2;37mCompleting %d\e[m'
-source <(carapace _carapace)
+plugins=(git zsh-autosuggestions zsh-syntax-highlighting fast-syntax-highlighting zsh-autocomplete)
 
+source $ZSH/oh-my-zsh.sh
+
+# zsh-autocomplete config
+bindkey              '^I' menu-select
+bindkey "$terminfo[kcbt]" menu-select
+zstyle ':completion:*' list-rows-first no
 
 # FZF
 eval "$(fzf --zsh)"
-export FZF_CTRL_T_COMMAND='fd --type f --max-depth 1 --one-file-system; fd --type d  --max-depth 1 --hidden --strip-cwd-prefix --one-file-system --exclude .git; fd --type d --hidden --strip-cwd-prefix --one-file-system --exclude .git --min-depth 2'
+export FZF_CTRL_T_COMMAND='fd --type f --max-depth 1 --one-file-system; fd --type d --hidden --strip-cwd-prefix --one-file-system --exclude .git --min-depth 2'
 
 # Setup fzf previews
 export FZF_CTRL_T_OPTS="
@@ -45,6 +42,9 @@ else
   bat --decorations=always --color=always --theme auto:system -n --line-range :50 {}
 fi
 '"
+
+# history manager
+eval "$(atuin init zsh)"
 
 #* Conda Setup
 # export PATH=/usr/local/anaconda3/bin:$PATH

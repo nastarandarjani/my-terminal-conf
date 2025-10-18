@@ -64,8 +64,11 @@ git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-m
 # Zsh Syntax Highlighting
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
 
-# Fast Syntax Highlighting (optional alternative)
+# Fast Syntax Highlighting
 git clone https://github.com/zdharma-continuum/fast-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/fast-syntax-highlighting
+
+# Zsh Autocomplete
+git clone --depth 1 -- https://github.com/marlonrichert/zsh-autocomplete.git $ZSH_CUSTOM/plugins/zsh-autocomplete
 ```
 
 ---
@@ -138,7 +141,7 @@ Install **fzf**, a command-line fuzzy finder:
 brew install fzf
 ```
 
-Install **atuin**, a smarter, searchable shell history replacement:
+And finally, install **atuin**, a smarter, searchable shell history replacement:
 
 ```bash
 brew install atuin
@@ -149,14 +152,6 @@ Copy the Atuin configuration file:
 ```bash
 cp atuin_config.toml ~/.config/atuin/config.toml
 ```
-
-And finally, install **carapace**, a command-line completion for many tools
-
-```bash
-brew install carapace
-```
-
----
 
 ### 8. Update `.zshrc`
 
